@@ -3,27 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Digital Product Directory</title>
+    <title>Nexus AI | Digital Product Ecosystem</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script>
+      // Shim process.env to prevent blank page errors in browser environments
+      window.process = window.process || { env: {} };
+    </script>
     <style>
       body {
         font-family: 'Inter', sans-serif;
         background-color: #ffffff;
         color: #000000;
+        overflow-x: hidden;
       }
-      /* Custom scrollbar for a cleaner look */
+      /* Custom scrollbar */
       ::-webkit-scrollbar {
-        width: 8px;
+        width: 6px;
       }
       ::-webkit-scrollbar-track {
-        background: #f1f1f1; 
+        background: #f8f9fa; 
       }
       ::-webkit-scrollbar-thumb {
-        background: #888; 
+        background: #d1d5db;
+        border-radius: 10px;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #555; 
+        background: #9ca3af; 
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
       }
     </style>
   <script type="importmap">
@@ -41,5 +50,6 @@
 </head>
   <body>
     <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
   </body>
 </html>
